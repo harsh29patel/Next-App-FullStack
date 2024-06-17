@@ -31,6 +31,6 @@ const userSchema = mongoose.Schema({
     verifyTokenExpiry:Date
 })
 
-const User = mongoose.model.users || mongoose.model("users" , userSchema)
+const User = mongoose.models.users || mongoose.model('users' , userSchema)  // models ave yadd rakh
 
-export default User
+export default User;

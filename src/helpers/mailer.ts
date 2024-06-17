@@ -1,8 +1,6 @@
 import User from '@/models/user.model';
 import nodemailer from 'nodemailer'
 import bcryptjs from "bcryptjs"
-import { hash } from 'crypto';
-import { Html } from 'next/document';
 
 
 

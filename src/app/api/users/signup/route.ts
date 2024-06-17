@@ -1,10 +1,9 @@
 import {connect} from "@/dbConfig/dbConfig"
 import User from "@/models/user.model"
-import { error, log } from "console"
 import { NextRequest,NextResponse } from "next/server"
 import bcryptjs, { hash } from "bcryptjs"
 import { sendEmail } from "@/helpers/mailer"
-import { send } from "process"
+
 
 connect()
 

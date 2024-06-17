@@ -32,7 +32,7 @@ export const sendEmail = async({email , emailType , userId}:any)=>{
         const forgot={
           html:`<p>Click <a href="${process.env.DOMAIN}/forgotpassword>?token=${hashedToken}">here</a> to ${emailType==="VERIFY"?"Verify your email":"Reset your email"}
           or copy and paste the link below in your browser\
-          <br> ${process.env.DOMAIN}/veirfyemail?token=${hashedToken}
+          <br> ${process.env.DOMAIN}/forgotpassword?token=${hashedToken}
           </p>`
         }
 
@@ -51,8 +51,9 @@ export const sendEmail = async({email , emailType , userId}:any)=>{
 
            const mailResponse = await transport.sendMail(mailOptions)
                 return mailResponse 
-    } catch (error:any) {
-        throw new Error(error.message)
+    } 
+          catch (error:any) {
+         throw new Error(error.message)
     }
 }
 

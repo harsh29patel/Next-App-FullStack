@@ -22,7 +22,7 @@ export default function verifyEmail() {
     }
     useEffect(()=>{
         seterror(false)
-      const urlToken =   window.location.search.split("=")[1]  // to get token
+      const urlToken =   window.location.search.split("=")[0]  // to get token
       settoken(urlToken || "")
 
         // const {query}:any = router;   next js above one is core javascript
